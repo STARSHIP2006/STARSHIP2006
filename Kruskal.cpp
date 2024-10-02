@@ -4,6 +4,10 @@
 
 using namespace std;
 
+bool comp (vector<int, int, int> &a, vector<int, int, int> &b)
+{
+    return a[2]<b[2];
+}
 // Find the root (or representative) of the set containing i with path compression
 int find(vector<int>& parent, int i) {
     if (parent[i] != i) {
