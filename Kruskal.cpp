@@ -36,9 +36,7 @@ void unionSets(vector<int>& parent, vector<int>& rank, int x, int y) {
 // Kruskal's algorithm to find the Minimum Spanning Tree
 int kruskal(int V, vector<vector<int>>& edges) {
     // Sort edges by weight
-    sort(edges.begin(), edges.end(), [](const vector<int>& a, const vector<int>& b) {
-        return a[2] < b[2];
-    });
+    sort(edges.begin(), edges.end(), comp);
 
     // Initialize union-find structures
     vector<int> parent(V);
