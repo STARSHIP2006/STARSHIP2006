@@ -34,3 +34,22 @@ vector<int> factors (int n)
             v.push_back(p);
     return v;//contains all primes <=n
 }
+
+//modular exponentiation
+int modularExponentiation(int base, int exp, int mod) {
+    int result = 1;
+    base = base % mod;  // In case base is larger than mod
+
+    while (exp > 0) {
+        // If exp is odd, multiply base with result
+        if (exp % 2 == 1) {
+            result = (result * base) % mod;
+        }
+        
+        // exp must be even now
+        exp = exp / 2;
+        base = (base * base) % mod;  // Square the base
+    }
+
+    return result;
+}
