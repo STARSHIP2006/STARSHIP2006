@@ -88,7 +88,7 @@ int gauss (vector < vector<double> > a, vector<double> & ans) {
     ans.assign (m, 0);
     for (int i=0; i<m; ++i)
         if (where[i] != -1)
-            ans[i] = a[where[i]][m] / a[where[i]][i];
+            ans[i] = a[where[i]][m]] / a[where[i]][i]];
     for (int i=0; i<n; ++i) {
         double sum = 0;
         for (int j=0; j<m; ++j)
